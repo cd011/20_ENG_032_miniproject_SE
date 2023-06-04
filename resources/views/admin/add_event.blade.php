@@ -46,15 +46,24 @@
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
             <div class="container" align="left" style="padding-top: 50px">
-                <form>
+                @if(session()->has('message'))
+                <div class="alert alert-success">
+                  <button type="button" class="close" data-dismiss="alert">
+                    x
+                  </button>
+                  {{session()->get('message')}}
+                </div>
+                @endif
+                <form action="{{url('upload_event')}}" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <div style="padding: 15px">
                         <label>Event Title</label>
-                        <input type="text" style="color:black; width: 42em;" name="title" placeholder="Add event title..">
+                        <input type="text" style="color:black; width: 42em;" name="title" placeholder="Add event title.." required="">
                     </div>
 
                     <div style="padding: 15px">
                         <label>Category</label>
-                        <select style="color:black;">
+                        <select style="color:black;" required="">
                             <option>--Select--</option>
                             <option value="Faculty">Faculty</option>
                             <option value="University">University</option>
@@ -66,13 +75,13 @@
                     <div style="padding: 15px">
                         <label>Body</label>
                         <!--input type="text" style="color:black;" name="body" placeholder="Add news body.."-->
-                        <textarea name="body" style="color:black; width: 42em; height: 20em" placeholder="Add event body..">
+                        <textarea name="body" style="color:black; width: 42em; height: 20em" placeholder="Add event body.." required="">
                         </textarea>
                     </div>
 
                     <div style="padding: 15px">
                         <label>Image</label>
-                        <input type="file" name="file">
+                        <input type="file" name="image" required="">
                     </div>
 
                     <div style="padding: 15px">

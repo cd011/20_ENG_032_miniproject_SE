@@ -46,23 +46,34 @@
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
             <div class="container" align="left" style="padding-top: 100px">
-                <form>
+                @if(session()->has('message'))
+                <div class="alert alert-success">
+                  <button type="button" class="close" data-dismiss="alert">
+                    x
+                  </button>
+                  {{session()->get('message')}}
+                </div>
+                @endif
+                <form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data">
+
+                  @csrf
+
                     <div style="padding: 15px">
                         <label>Doctor Name</label>
-                        <input type="text" style="color:black;" name="name" placeholder="Doctor name">
+                        <input type="text" style="color:black;" name="name" placeholder="Doctor name" required="">
                     </div>
                     <div style="padding: 15px">
                         <label>Phone number</label>
-                        <input type="number" style="color:black;" name="number" placeholder="+94xxxxxxxxx">
+                        <input type="number" style="color:black;" name="phone" placeholder="+94xxxxxxxxx" required="">
                     </div>
                     <div style="padding: 15px">
                         <label>Email</label>
-                        <input type="text" style="color:black;" name="email" placeholder="example@email.com">
+                        <input type="text" style="color:black;" name="email" placeholder="example@email.com" required="">
                     </div>
 
                     <div style="padding: 15px">
                         <label>Image</label>
-                        <input type="file" name="file">
+                        <input type="file" name="image" required="">
                     </div>
 
                     <div style="padding: 15px">
