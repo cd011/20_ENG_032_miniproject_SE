@@ -63,7 +63,7 @@
 
                     <div style="padding: 15px">
                         <label>Category</label>
-                        <select style="color:black;" required="">
+                        <select name="category" style="color:black;" required="">
                             <option>--Select--</option>
                             <option value="Faculty">Faculty</option>
                             <option value="University">University</option>
