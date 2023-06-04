@@ -30,4 +30,8 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/add_doctor_view', [AdminController::class, 'addview']);
+Route::get('/add_news_view', [AdminController::class, 'addNews']);
+
+Route::get('/add_event_view', [AdminController::class, 'addEvents']);
+
+Route::get('/add_doctor_view', [AdminController::class, 'addDoc']);

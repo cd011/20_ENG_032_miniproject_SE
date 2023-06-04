@@ -45,19 +45,29 @@
 
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
-            <div class="container" align="left" style="padding-top: 100px">
+            <div class="container" align="left" style="padding-top: 50px">
                 <form>
                     <div style="padding: 15px">
-                        <label>Doctor Name</label>
-                        <input type="text" style="color:black;" name="name" placeholder="Doctor name">
+                        <label>Event Title</label>
+                        <input type="text" style="color:black; width: 42em;" name="title" placeholder="Add event title..">
                     </div>
+
                     <div style="padding: 15px">
-                        <label>Phone number</label>
-                        <input type="number" style="color:black;" name="number" placeholder="+94xxxxxxxxx">
+                        <label>Category</label>
+                        <select style="color:black;">
+                            <option>--Select--</option>
+                            <option value="Faculty">Faculty</option>
+                            <option value="University">University</option>
+                            <option value="Local">Local</option>
+                            <option value="International">International</option>
+                        </select>
                     </div>
+
                     <div style="padding: 15px">
-                        <label>Email</label>
-                        <input type="text" style="color:black;" name="email" placeholder="example@email.com">
+                        <label>Body</label>
+                        <!--input type="text" style="color:black;" name="body" placeholder="Add news body.."-->
+                        <textarea name="body" style="color:black; width: 42em; height: 20em" placeholder="Add event body..">
+                        </textarea>
                     </div>
 
                     <div style="padding: 15px">
