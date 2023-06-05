@@ -80,8 +80,6 @@
 
   @include('user.doctor')
 
-  @include('user.appointment')
-
   @include('user.footer')
 
   @include('user.script')

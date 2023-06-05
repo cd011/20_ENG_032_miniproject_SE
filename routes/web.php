@@ -28,6 +28,8 @@ Route::get('/view_counselling', [HomeController::class, 'viewCounselling']);
 
 Route::get('/view_financial_aid', [HomeController::class, 'viewFinancial']);
 
+Route::post('/appointment', [HomeController::class, 'appointment']);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

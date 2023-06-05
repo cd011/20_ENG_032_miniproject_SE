@@ -14,6 +14,8 @@ use App\Models\Event;
 
 use App\Models\News;
 
+use App\Models\Appointment;
+
 class HomeController extends Controller
 {
     public function redirect()
@@ -77,5 +79,26 @@ class HomeController extends Controller
     {
         $news = News::all();
         return view('user.view_financial_aid',compact('news'));
+    }
+
+    public function appointment(Request $request)
+    {
+        $data=new Appointment;
+
+        $data->name=$request->name;
+        $data->email=$request->email;
+        $data->phone=$request->number;
+        $data->doctor=$request->doctor;
+        $data->date=$request->date;
+        $data->message=$request->message;
+        $data->status='In progress..';
+        if(Auth::id())
+        {
+            $data->user_id=Auth::user()->id;
+        }
+
+        $data->save();
+
+        return redirect()->back()->with('message','Appointment request successful!');
     }
 }
