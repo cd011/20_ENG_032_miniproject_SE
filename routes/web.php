@@ -20,6 +20,14 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/home', [HomeController::class, 'redirect']);
 
+Route::get('/view_news', [HomeController::class, 'viewNews']);
+
+Route::get('/view_events', [HomeController::class, 'viewEvents']);
+
+Route::get('/view_counselling', [HomeController::class, 'viewCounselling']);
+
+Route::get('/view_financial_aid', [HomeController::class, 'viewFinancial']);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

@@ -54,4 +54,28 @@ class HomeController extends Controller
         }
 
     }
+
+    public function viewNews()
+    {
+        $news = News::all();
+        return view('user.view_news',compact('news'));
+    }
+
+    public function viewEvents()
+    {
+        $events = Event::all();
+        return view('user.view_events',compact('events'));
+    }
+
+    public function viewCounselling()
+    {
+        $doctors = Doctor::all();
+        return view('user.view_counselling',compact('doctors'));
+    }
+
+    public function viewFinancial()
+    {
+        $news = News::all();
+        return view('user.view_financial_aid',compact('news'));
+    }
 }
