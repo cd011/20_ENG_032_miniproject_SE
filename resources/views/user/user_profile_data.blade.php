@@ -11,12 +11,12 @@
                 <a>{{$data->status}}</a>
                 <a onclick="return confirm('Are you sure you want to cancel this appointment?')" href="{{url('cancel_appointment',$data->id)}}">Cancel</a>
               </div>
-              <a href="blog-details.html" class="post-thumb">
+              <a>
                 <img src="" alt="">
               </a>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">{{$data->doctor}}</a></h5>
+              <h5 class="post-title"><a href="{{url('view_counselling')}}">{{$data->doctor}}</a></h5>
               <div class="site-info">
                 <div class="avatar mr-2">
                   <span>{{$data->date}}</span>

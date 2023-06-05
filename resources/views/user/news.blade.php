@@ -15,7 +15,7 @@
               </a>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">{{$newss->title}}</a></h5>
+              <h5 class="post-title"><a href="{{route('detailed_news.show', ['id' => $newss->id])}}">{{$newss->title}}</a></h5>
               <div class="site-info">
                 <div class="avatar mr-2">
                   <span>{{$newss->category}}</span>
