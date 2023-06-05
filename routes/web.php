@@ -34,6 +34,13 @@ Route::get('/view_user_profile', [HomeController::class, 'viewProfile']);
 
 Route::get('/cancel_appointment/{id}', [HomeController::class, 'cancelAppointment']);
 
+#Route::get('/detailed_news/{id}', [HomeController::class, 'detailedNews']);
+
+Route::get('/detailed_news/{id}', [HomeController::class, 'detailedNews'])->name('detailed_news.show');
+
+Route::get('/detailed_events/{id}', [HomeController::class, 'detailedEvents'])->name('detailed_events.show');
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

@@ -122,4 +122,18 @@ class HomeController extends Controller
         $data->delete();
         return redirect()->back();
     }
+
+    public function detailedNews($id)
+    {
+        $news = News::find($id);
+
+        return view('user.detailed_news', ['news' => $news]);
+    }
+
+    public function detailedEvents($id)
+    {
+        $events = Event::find($id);
+
+        return view('user.detailed_events', ['events' => $events]);
+    }
 }
