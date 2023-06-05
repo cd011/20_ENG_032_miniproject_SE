@@ -101,4 +101,25 @@ class HomeController extends Controller
 
         return redirect()->back()->with('message','Appointment request successful!');
     }
+
+    public function viewProfile()
+    {
+        if(Auth::id())
+        {
+            $userid = Auth::user()->id;
+            $profile_data = Appointment::where('user_id',$userid)->get();
+            return view('user.view_user_profile',compact('profile_data'));
+        }
+        else
+        {
+            return redirect()->back();
+        }
+    }
+
+    public function cancelAppointment($id)
+    {
+        $data = Appointment::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
 }

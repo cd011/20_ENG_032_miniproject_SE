@@ -30,6 +30,10 @@ Route::get('/view_financial_aid', [HomeController::class, 'viewFinancial']);
 
 Route::post('/appointment', [HomeController::class, 'appointment']);
 
+Route::get('/view_user_profile', [HomeController::class, 'viewProfile']);
+
+Route::get('/cancel_appointment/{id}', [HomeController::class, 'cancelAppointment']);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

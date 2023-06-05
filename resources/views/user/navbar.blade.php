@@ -26,16 +26,21 @@
             <li class="nav-item">
               <a class="nav-link" href="{{url('view_events')}}">Events</a>
             </li>
+            
+
+            @if(Route::has('login'))
+
+            @auth
+
             <li class="nav-item">
               <a class="nav-link" href="{{url('view_counselling')}}">Counselling</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{url('view_financial_aid')}}">Financial Aid</a>
             </li>
-
-            @if(Route::has('login'))
-
-            @auth
+            <li class="nav-item">
+              <a class="nav-link" style="background-color:mediumSpringGreen; color:white;" href="{{url('view_user_profile')}}">{{Auth::user()->name}}</a>
+            </li>
 
             <x-app-layout>
             </x-app-layout>
