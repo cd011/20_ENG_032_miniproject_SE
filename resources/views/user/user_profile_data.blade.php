@@ -1,6 +1,6 @@
 <div class="page-section bg-light">
     <div class="container">
-      <h1 class="text-center wow fadeInUp">Appointments</h1>
+      <h1 class="text-center wow fadeInUp" style="font-size: 24px;">Appointments</h1>
       <div class="row mt-5">
 
         @foreach($profile_data as $data)
@@ -33,7 +33,7 @@
 
   <div class="page-section bg-light">
     <div class="container">
-      <h1 class="text-center wow fadeInUp">Articles</h1>
+      <h1 class="text-center wow fadeInUp" style="font-size: 24px;">Articles</h1>
       <div class="row mt-5">
 
         @foreach($profile_news as $news)
@@ -65,7 +65,7 @@
 
   <div class="page-section bg-light">
     <div class="container">
-      <h1 class="text-center wow fadeInUp">Events</h1>
+      <h1 class="text-center wow fadeInUp" style="font-size: 24px;">Events</h1>
       <div class="row mt-5">
 
         @foreach($profile_events as $news)
@@ -97,7 +97,7 @@
 
   <div class="page-section bg-light">
     <div class="container">
-      <h1 class="text-center wow fadeInUp">Applications</h1>
+      <h1 class="text-center wow fadeInUp" style="font-size: 24px;">Applications</h1>
       <div class="row mt-5">
 
         @foreach($profile_applications as $applicationsData)

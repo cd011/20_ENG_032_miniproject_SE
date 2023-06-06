@@ -1,6 +1,6 @@
 <div class="page-section">
     <div class="container">
-      <h1 class="text-center wow fadeInUp">Organize an event</h1>
+      <h1 class="text-center wow fadeInUp" style="font-size: 24px;">Organize an event</h1>
 
       <form class="main-form" action="{{url('userAddEvent')}}" method="POST">
         @csrf

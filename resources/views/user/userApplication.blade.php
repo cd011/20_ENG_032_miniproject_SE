@@ -1,6 +1,6 @@
 <div class="page-section">
     <div class="container">
-      <h1 class="text-center wow fadeInUp">Application</h1>
+      <h1 class="text-center wow fadeInUp" style="font-size: 24px;">Application</h1>
 
       <form class="main-form" action="{{url('userApplication')}}" method="POST">
         @csrf
@@ -22,9 +22,9 @@
             <input type="date" name="date" class="form-control">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
-          <label>Select Year</label>
+          <label>Select aid</label>
             <select name="year" id="departement" class="custom-select">
-              <option>--Select Year--</option>
+              <option>--Select--</option>
               <option value="Mahapola">Mahapola</option>
               <option value="Laptop">Laptop Loan</option>
               <option value="Hostel">Hostel</option>
