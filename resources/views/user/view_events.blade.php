@@ -11,7 +11,14 @@
   <header>
   @include('user.navbar')
   </header>
-
+  @if(session()->has('message'))
+    <div class="alert alert-success">
+      <button type="button" class="close" data-dismiss="alert">
+        x
+      </button>
+      {{session()->get('message')}}
+    </div>
+    @endif
   <div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/events_bg_1.jpg);">
     <div class="banner-section">
       <div class="container text-center wow fadeInUp">

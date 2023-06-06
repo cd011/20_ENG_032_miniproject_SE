@@ -1,6 +1,6 @@
 <div class="page-section bg-light">
     <div class="container">
-      <h1 class="text-center wow fadeInUp">Latest News</h1>
+      <h1 class="text-center wow fadeInUp" style="font-size: 24px;">Latest News</h1>
       <div class="row mt-5">
 
         @foreach($news as $newss)

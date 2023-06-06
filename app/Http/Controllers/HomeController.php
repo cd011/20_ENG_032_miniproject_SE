@@ -16,6 +16,12 @@ use App\Models\News;
 
 use App\Models\Appointment;
 
+use App\Models\UserAddEvent;
+
+use App\Models\UserAddNews;
+
+use App\Models\UserApplication;
+
 class HomeController extends Controller
 {
     public function redirect()
@@ -63,6 +69,11 @@ class HomeController extends Controller
         return view('user.view_news',compact('news'));
     }
 
+    public function viewAbout()
+    {
+        return view('user.about_us');
+    }
+
     public function viewEvents()
     {
         $events = Event::all();
@@ -102,13 +113,80 @@ class HomeController extends Controller
         return redirect()->back()->with('message','Appointment request successful!');
     }
 
+    public function userAddEvent(Request $request)
+    {
+        $data=new UserAddEvent;
+
+        $data->name=$request->name;
+        $data->email=$request->email;
+        $data->date=$request->date;
+        $data->category=$request->category;
+        $data->topic=$request->topic;
+        $data->message=$request->message;
+        $data->status='In progress..';
+        if(Auth::id())
+        {
+            $data->user_id=Auth::user()->id;
+        }
+
+        $data->save();
+
+        return redirect()->back()->with('message','Event request successful!');
+    }
+
+    public function userAddNews(Request $request)
+    {
+        $data=new UserAddNews;
+
+        $data->name=$request->name;
+        $data->email=$request->email;
+        $data->date=$request->date;
+        $data->category=$request->category;
+        $data->topic=$request->topic;
+        $data->message=$request->message;
+        $data->status='In progress..';
+        if(Auth::id())
+        {
+            $data->user_id=Auth::user()->id;
+        }
+
+        $data->save();
+
+        return redirect()->back()->with('message','Article request successful!');
+    }
+
+    public function userApplication(Request $request)
+    {
+        $data=new UserApplication;
+
+        $data->name=$request->name;
+        $data->phone=$request->phone;
+        $data->email=$request->email;
+        $data->date=$request->date;
+        $data->year=$request->year;
+        $data->address=$request->address;
+        $data->message=$request->message;
+        $data->status='In progress..';
+        if(Auth::id())
+        {
+            $data->user_id=Auth::user()->id;
+        }
+
+        $data->save();
+
+        return redirect()->back()->with('message','Application sent successfully!');
+    }
+
     public function viewProfile()
     {
         if(Auth::id())
         {
             $userid = Auth::user()->id;
             $profile_data = Appointment::where('user_id',$userid)->get();
-            return view('user.view_user_profile',compact('profile_data'));
+            $profile_news = UserAddNews::where('user_id',$userid)->get();
+            $profile_events = UserAddEvent::where('user_id',$userid)->get();
+            $profile_applications = UserApplication::where('user_id',$userid)->get();
+            return view('user.view_user_profile',compact('profile_data','profile_news','profile_events','profile_applications'));
         }
         else
         {
@@ -119,6 +197,13 @@ class HomeController extends Controller
     public function cancelAppointment($id)
     {
         $data = Appointment::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+
+    public function cancelApplication($id)
+    {
+        $data = UserApplication::find($id);
         $data->delete();
         return redirect()->back();
     }

@@ -2,7 +2,7 @@
     <div class="container">
       <h1 class="text-center wow fadeInUp">Application</h1>
 
-      <form class="main-form" action="{{url('appointment')}}" method="POST">
+      <form class="main-form" action="{{url('userApplication')}}" method="POST">
         @csrf
         <div class="row mt-5 ">
         <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
@@ -25,10 +25,10 @@
           <label>Select Year</label>
             <select name="year" id="departement" class="custom-select">
               <option>--Select Year--</option>
-              <option value="first">First Year</option>
-              <option value="second">Second Year</option>
-              <option value="third">Third Year</option>
-              <option value="fourth">Fourth Year</option>
+              <option value="Mahapola">Mahapola</option>
+              <option value="Laptop">Laptop Loan</option>
+              <option value="Hostel">Hostel</option>
+              <option value="Bursary">Bursary</option>
             </select>
           </div>
           <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">

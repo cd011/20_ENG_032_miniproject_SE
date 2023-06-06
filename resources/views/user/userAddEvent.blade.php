@@ -2,7 +2,7 @@
     <div class="container">
       <h1 class="text-center wow fadeInUp">Organize an event</h1>
 
-      <form class="main-form" action="{{url('appointment')}}" method="POST">
+      <form class="main-form" action="{{url('userAddEvent')}}" method="POST">
         @csrf
         <div class="row mt-5 ">
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft">

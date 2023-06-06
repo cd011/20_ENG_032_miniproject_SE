@@ -22,6 +22,8 @@ Route::get('/home', [HomeController::class, 'redirect']);
 
 Route::get('/view_news', [HomeController::class, 'viewNews']);
 
+Route::get('/about_us', [HomeController::class, 'viewAbout']);
+
 Route::get('/view_events', [HomeController::class, 'viewEvents']);
 
 Route::get('/view_counselling', [HomeController::class, 'viewCounselling']);
@@ -30,9 +32,17 @@ Route::get('/view_financial_aid', [HomeController::class, 'viewFinancial']);
 
 Route::post('/appointment', [HomeController::class, 'appointment']);
 
+Route::post('/userAddEvent', [HomeController::class, 'userAddEvent']);
+
+Route::post('/userAddNews', [HomeController::class, 'userAddNews']);
+
+Route::post('/userApplication', [HomeController::class, 'userApplication']);
+
 Route::get('/view_user_profile', [HomeController::class, 'viewProfile']);
 
 Route::get('/cancel_appointment/{id}', [HomeController::class, 'cancelAppointment']);
+
+Route::get('/cancel_application/{id}', [HomeController::class, 'cancelApplication']);
 
 #Route::get('/detailed_news/{id}', [HomeController::class, 'detailedNews']);
 

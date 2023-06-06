@@ -59,7 +59,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 py-3 wow fadeInUp">
-            <h1>Welcome to UniCare <br></h1>
+            <h1 style="font-size: 24px;">Welcome to UniCare <br></h1>
             <br>
             <p class="text-grey mb-4">UniCare is a welfare web application that manages the welfare services offered by the university to the students. UniCare is used for updating events planning, hostel facilities, student counselling, financial aid for
             students and laptop loan. By using the UniCare web application the welfare activities could be conducted in a much effective manner, and to maximize the effectiveness of time.</p>

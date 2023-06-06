@@ -4,7 +4,7 @@
         <div class="col-sm-6 col-lg-3 py-3">
           <h5>Group</h5>
           <ul class="footer-menu">
-            <li><a href="#">About Us</a></li>
+            <li><a href="{{url('about_us')}}">About Us</a></li>
 
           </ul>
         </div>
