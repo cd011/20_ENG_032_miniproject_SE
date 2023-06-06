@@ -8,9 +8,9 @@
           <div class="card-blog">
             <div class="header">
               <div class="post-category">
-                <a href="#">{{$event->category}}</a>
+                <a>{{$event->category}}</a>
               </div>
-              <a href="blog-details.html" class="post-thumb">
+              <a class="post-thumb">
                 <img src="eventimage/{{$event->image}}" alt="">
               </a>
             </div>

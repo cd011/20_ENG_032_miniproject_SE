@@ -1,7 +1,7 @@
 <div class="page-section">
     <div class="container">
       <h1 class="text-center mb-5 wow fadeInUp">Student Counselling</h1>
-
+      
       <div class="owl-carousel wow fadeInUp" id="doctorSlideshow">
         @foreach($doctors as $doctor)
         <div class="item">
@@ -16,6 +16,7 @@
           </div>
         </div>
         @endforeach
+
       </div>
     </div>
   </div>

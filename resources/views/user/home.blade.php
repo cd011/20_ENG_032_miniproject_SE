@@ -78,7 +78,12 @@
 
   @include('user.event')
 
+
+  @if(Route::has('login'))
+  @auth
   @include('user.doctor')
+  @endauth
+  @endif
 
   @include('user.footer')
 

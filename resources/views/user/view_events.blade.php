@@ -107,6 +107,8 @@
     </div> <!-- .container -->
   </div> <!-- .page-section -->
 
+  @include('user.userAddEvent')
+
   @include('user.footer')
 
   @include('user.script')
