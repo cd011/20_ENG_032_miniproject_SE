@@ -71,6 +71,16 @@ Route::get('/add_doctor_view', [AdminController::class, 'addDoc']);
 
 Route::get('/add_application_view', [AdminController::class, 'addAppli']);
 
+
+Route::get('/approve_news_view', [AdminController::class, 'approveNews']);
+
+Route::get('/approve_events_view', [AdminController::class, 'approveEvents']);
+
+Route::get('/approve_appointment_view', [AdminController::class, 'approveAppointment']);
+
+Route::get('/approve_appli_view', [AdminController::class, 'approveAppli']);
+
+
 Route::post('/upload_news', [AdminController::class, 'upNews']);
 
 Route::post('/upload_event', [AdminController::class, 'upEvent']);
@@ -78,3 +88,20 @@ Route::post('/upload_event', [AdminController::class, 'upEvent']);
 Route::post('/upload_doctor', [AdminController::class, 'upDoc']);
 
 Route::post('/upload_application', [AdminController::class, 'upAppli']);
+
+
+Route::get('/approve_user_news/{id}', [AdminController::class, 'approveUserNews']);
+
+Route::get('/reject_user_news/{id}', [AdminController::class, 'rejectUserNews']);
+
+Route::get('/approve_user_event/{id}', [AdminController::class, 'approveUserEvent']);
+
+Route::get('/reject_user_event/{id}', [AdminController::class, 'rejectUserEvent']);
+
+Route::get('/approve_user_appli/{id}', [AdminController::class, 'approveUserAppli']);
+
+Route::get('/reject_user_appli/{id}', [AdminController::class, 'rejectUserAppli']);
+
+Route::get('/approve_user_appointment/{id}', [AdminController::class, 'approveUserAppointment']);
+
+Route::get('/reject_user_appointment/{id}', [AdminController::class, 'rejectUserAppointment']);

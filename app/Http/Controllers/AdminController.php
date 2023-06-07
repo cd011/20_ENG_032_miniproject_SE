@@ -12,6 +12,14 @@ use App\Models\News;
 
 use App\Models\AdminAppli;
 
+use App\Models\UserAddNews;
+
+use App\Models\UserAddEvent;
+
+use App\Models\UserApplication;
+
+use App\Models\Appointment;
+
 class AdminController extends Controller
 {
     public function addDoc()
@@ -92,5 +100,93 @@ class AdminController extends Controller
 
         $appli->save();
         return redirect()->back()->with('message','Application added successfully!');
+    }
+
+    public function approveNews()
+    {
+        $data = UserAddNews::all();
+        return view('admin.approve_news', compact('data'));
+    }
+
+    public function approveEvents()
+    {
+        $data = UserAddEvent::all();
+        return view('admin.approve_events', compact('data'));
+    }
+
+    public function approveAppointment()
+    {
+        $data = Appointment::all();
+        return view('admin.approve_appointment', compact('data'));
+    }
+
+    public function approveAppli()
+    {
+        $data = UserApplication::all();
+        return view('admin.approve_appli', compact('data'));
+    }
+
+    public function approveUserNews($id)
+    {
+        $data = UserAddNews::find($id);
+        $data->status = 'Approved';
+        $data->save();
+        return redirect()->back();
+    }
+
+    public function rejectUserNews($id)
+    {
+        $data = UserAddNews::find($id);
+        $data->status = 'Rejected';
+        $data->save();
+        return redirect()->back();
+    }
+
+    public function approveUserEvent($id)
+    {
+        $data = UserAddEvent::find($id);
+        $data->status = 'Approved';
+        $data->save();
+        return redirect()->back();
+    }
+
+    public function rejectUserEvent($id)
+    {
+        $data = UserAddEvent::find($id);
+        $data->status = 'Rejected';
+        $data->save();
+        return redirect()->back();
+    }
+
+    public function approveUserAppli($id)
+    {
+        $data = UserApplication::find($id);
+        $data->status = 'Approved';
+        $data->save();
+        return redirect()->back();
+    }
+
+    public function rejectUserAppli($id)
+    {
+        $data = UserApplication::find($id);
+        $data->status = 'Rejected';
+        $data->save();
+        return redirect()->back();
+    }
+
+    public function approveUserAppointment($id)
+    {
+        $data = Appointment::find($id);
+        $data->status = 'Approved';
+        $data->save();
+        return redirect()->back();
+    }
+
+    public function rejectUserAppointment($id)
+    {
+        $data = Appointment::find($id);
+        $data->status = 'Rejected';
+        $data->save();
+        return redirect()->back();
     }
 }
