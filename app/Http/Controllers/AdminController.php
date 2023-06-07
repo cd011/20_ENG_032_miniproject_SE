@@ -126,6 +126,19 @@ class AdminController extends Controller
         return view('admin.approve_appli', compact('data'));
     }
 
+
+
+    public function viewAllData()
+    {
+        $doctors = Doctor::all();
+        $events = Event::all();
+        $news = News::all();
+        $appli = AdminAppli::all();
+        return view('admin.all_data', compact('doctors', 'events', 'news', 'appli'));
+    }
+
+
+
     public function approveUserNews($id)
     {
         $data = UserAddNews::find($id);

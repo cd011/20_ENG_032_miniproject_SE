@@ -81,6 +81,10 @@ Route::get('/approve_appointment_view', [AdminController::class, 'approveAppoint
 Route::get('/approve_appli_view', [AdminController::class, 'approveAppli']);
 
 
+
+Route::get('/all_data_view', [AdminController::class, 'viewAllData']);
+
+
 Route::post('/upload_news', [AdminController::class, 'upNews']);
 
 Route::post('/upload_event', [AdminController::class, 'upEvent']);

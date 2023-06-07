@@ -131,5 +131,19 @@
               </ul>
             </div>
           </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-bs-toggle="collapse" href="#allData" aria-expanded="false" aria-controls="allData">
+              <span class="menu-icon">
+                <i class="mdi mdi-laptop"></i>
+              </span>
+              <span class="menu-title">All the data</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="allData">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{{url('all_data_view')}}">View/Delete Data</a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </nav>
