@@ -39,23 +39,23 @@
         <div class="col-lg-8">
           <div class="row">
 
-            @foreach($news as $newss)
+            @foreach($appli as $applis)
             <div class="col-sm-6 py-3">
               <div class="card-blog">
                 <div class="header">
                   <div class="post-category">
-                    <a>{{$newss->category}}</a>
+                    <a>{{$applis->category}}</a>
                   </div>
                   <a>
-                    <img src="newsimage/{{$newss->image}}" alt="">
+                    <img src="appliimage/{{$applis->image}}" alt="">
                   </a>
                 </div>
                 <div class="body">
                   <!---->
-                  <h5 class="post-title"><a href="{{route('detailed_news.show', ['id' => $newss->id])}}">{{$newss->title}}</a></h5>
+                  <h5 class="post-title"><a href="{{route('detailed_appli.show', ['id' => $applis->id])}}">{{$applis->title}}</a></h5>
                   <!---->
                   <div class="site-info">
-                  <span>{{$newss->category}}</span>
+                  <span>{{$applis->category}}</span>
                 </div>
                 </div>
               </div>

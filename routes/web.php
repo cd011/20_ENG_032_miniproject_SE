@@ -50,6 +50,8 @@ Route::get('/detailed_news/{id}', [HomeController::class, 'detailedNews'])->name
 
 Route::get('/detailed_events/{id}', [HomeController::class, 'detailedEvents'])->name('detailed_events.show');
 
+Route::get('/detailed_appli/{id}', [HomeController::class, 'detailedAppli'])->name('detailed_appli.show');
+
 
 Route::middleware([
     'auth:sanctum',
@@ -67,8 +69,12 @@ Route::get('/add_event_view', [AdminController::class, 'addEvents']);
 
 Route::get('/add_doctor_view', [AdminController::class, 'addDoc']);
 
+Route::get('/add_application_view', [AdminController::class, 'addAppli']);
+
 Route::post('/upload_news', [AdminController::class, 'upNews']);
 
 Route::post('/upload_event', [AdminController::class, 'upEvent']);
 
 Route::post('/upload_doctor', [AdminController::class, 'upDoc']);
+
+Route::post('/upload_application', [AdminController::class, 'upAppli']);

@@ -10,6 +10,8 @@ use App\Models\Event;
 
 use App\Models\News;
 
+use App\Models\AdminAppli;
+
 class AdminController extends Controller
 {
     public function addDoc()
@@ -25,6 +27,11 @@ class AdminController extends Controller
     public function addEvents()
     {
         return view('admin.add_event');
+    }
+
+    public function addAppli()
+    {
+        return view('admin.add_application');
     }
 
     public function upDoc(Request $request)
@@ -70,5 +77,20 @@ class AdminController extends Controller
 
         $news->save();
         return redirect()->back()->with('message','News added successfully!');
+    }
+
+    public function upAppli(Request $request)
+    {
+        $appli=new AdminAppli;
+        $image=$request->image;
+        $imagename=time().'.'.$image->getClientoriginalExtension();
+        $request->image->move('appliimage',$imagename);
+        $appli->image=$imagename;
+        $appli->title=$request->title;
+        $appli->category=$request->category;
+        $appli->body=$request->body;
+
+        $appli->save();
+        return redirect()->back()->with('message','Application added successfully!');
     }
 }

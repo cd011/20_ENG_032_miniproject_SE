@@ -14,6 +14,8 @@ use App\Models\Event;
 
 use App\Models\News;
 
+use App\Models\AdminAppli;
+
 use App\Models\Appointment;
 
 use App\Models\UserAddEvent;
@@ -88,8 +90,8 @@ class HomeController extends Controller
 
     public function viewFinancial()
     {
-        $news = News::all();
-        return view('user.view_financial_aid',compact('news'));
+        $appli = AdminAppli::all();
+        return view('user.view_financial_aid',compact('appli'));
     }
 
     public function appointment(Request $request)
@@ -220,5 +222,12 @@ class HomeController extends Controller
         $events = Event::find($id);
 
         return view('user.detailed_events', ['events' => $events]);
+    }
+
+    public function detailedAppli($id)
+    {
+        $appli = AdminAppli::find($id);
+
+        return view('user.detailed_appli', ['appli' => $appli]);
     }
 }

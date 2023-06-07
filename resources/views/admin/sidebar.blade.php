@@ -97,5 +97,19 @@
               </ul>
             </div>
           </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-bs-toggle="collapse" href="#finance" aria-expanded="false" aria-controls="finance">
+              <span class="menu-icon">
+                <i class="mdi mdi-laptop"></i>
+              </span>
+              <span class="menu-title">Financial Aid</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="finance">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{{url('add_application_view')}}">Add applications</a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </nav>
