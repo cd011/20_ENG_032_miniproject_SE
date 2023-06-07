@@ -12,7 +12,7 @@
                 <a onclick="return confirm('Are you sure you want to cancel this appointment?')" href="{{url('cancel_appointment',$data->id)}}">Cancel</a>
               </div>
               <a>
-                <img src="" alt="">
+                <img src="assets/img/appointment_user.png" alt="">
               </a>
             </div>
             <div class="body">
@@ -44,7 +44,7 @@
                 <a>{{$news->status}}</a>
               </div>
               <a>
-                <img src="" alt="">
+                <img src="assets/img/news_bg_1.jpg" alt="">
               </a>
             </div>
             <div class="body">
@@ -76,7 +76,7 @@
                 <a>{{$news->status}}</a>
               </div>
               <a>
-                <img src="" alt="">
+                <img src="assets/img/events_bg_1.jpg" alt="">
               </a>
             </div>
             <div class="body">
@@ -109,7 +109,7 @@
                 <a onclick="return confirm('Are you sure you want to delete this application?')" href="{{url('cancel_application',$data->id)}}">Cancel</a>
               </div>
               <a>
-                <img src="" alt="">
+                <img src="assets/img/aid_bg_1.jpg" alt="">
               </a>
             </div>
             <div class="body">

@@ -20,7 +20,6 @@
                 <div class="avatar mr-2">
                   <span>{{$newss->category}}</span>
                 </div>
-                <span class="mai-time"></span> 1 week ago
               </div>
             </div>
           </div>

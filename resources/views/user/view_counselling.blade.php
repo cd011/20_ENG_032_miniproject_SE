@@ -52,6 +52,7 @@
 
   <div class="page-section bg-light">
     <div class="container">
+    <h1 class="text-center wow fadeInUp" style="font-size: 24px;">Advisors</h1>
       <div class="row justify-content-center">
         <div class="col-lg-10">
 

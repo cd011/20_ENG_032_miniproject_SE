@@ -114,8 +114,12 @@
     </div> <!-- .container -->
   </div> <!-- .page-section -->
 
+  @if(Route::has('login'))
+  @auth
   @include('user.userAddEvent')
-
+  @endauth
+  @endif 
+  
   @include('user.footer')
 
   @include('user.script')

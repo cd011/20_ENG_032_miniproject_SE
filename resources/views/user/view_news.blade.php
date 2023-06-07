@@ -113,9 +113,13 @@
       </div> <!-- .row -->
     </div> <!-- .container -->
   </div> <!-- .page-section -->
-
-  @include('user.userAddNews')
   
+  @if(Route::has('login'))
+  @auth
+  @include('user.userAddNews')
+  @endauth
+  @endif 
+
   @include('user.footer')
 
   @include('user.script')
