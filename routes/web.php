@@ -84,6 +84,17 @@ Route::get('/approve_appli_view', [AdminController::class, 'approveAppli']);
 
 Route::get('/all_data_view', [AdminController::class, 'viewAllData']);
 
+Route::get('/detailed_data/{body}', [AdminController::class, 'detailedData'])->name('detailed_data.show');
+
+Route::get('/delete_news/{id}', [AdminController::class, 'deleteNews']);
+
+Route::get('/delete_event/{id}', [AdminController::class, 'deleteEvent']);
+
+Route::get('/delete_doctor/{id}', [AdminController::class, 'deleteDoc']);
+
+Route::get('/delete_appli/{id}', [AdminController::class, 'deleteAppli']);
+
+
 
 Route::post('/upload_news', [AdminController::class, 'upNews']);
 
@@ -92,6 +103,7 @@ Route::post('/upload_event', [AdminController::class, 'upEvent']);
 Route::post('/upload_doctor', [AdminController::class, 'upDoc']);
 
 Route::post('/upload_application', [AdminController::class, 'upAppli']);
+
 
 
 Route::get('/approve_user_news/{id}', [AdminController::class, 'approveUserNews']);

@@ -202,4 +202,38 @@ class AdminController extends Controller
         $data->save();
         return redirect()->back();
     }
+
+    public function detailedData($body)
+    {
+        $data = $body;
+        return view('admin.detailed_data', ['data' => $data]);
+    }
+
+    public function deleteNews($id)
+    {
+        $data = News::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+
+    public function deleteEvent($id)
+    {
+        $data = Event::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+
+    public function deleteDoc($id)
+    {
+        $data = Doctor::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+
+    public function deleteAppli($id)
+    {
+        $data = AdminAppli::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
 }

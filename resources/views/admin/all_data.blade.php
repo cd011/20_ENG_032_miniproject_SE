@@ -41,10 +41,13 @@
                     <tr style="background-color:blue">
                         <th style="padding: 20px">{{$data1->title}}</th>
                         <th style="padding: 20px">{{$data1->category}}</th>
-                        <th style="padding: 20px width:500px">{{$data1->body}}</th>
-                        <th style="padding: 20px">{{$data1->image}}</th>
                         <th style="padding: 20px">
-                        <a class="btn btn-danger" href="{{url('deleteNews',$data1->id)}}">Remove</a>
+                        <a class="btn btn-success" href="{{route('detailed_data.show', ['body' => $data1->body])}}">View</a>
+                        </th>
+                        <!--th style="padding: 20px width:500px">{{$data1->body}}</th-->
+                        <th style="padding: 20px"><img height="100" width="100" src="newsimage/{{$data1->image}}" alt=""></th>
+                        <th style="padding: 20px">
+                        <a onclick="return confirm('Confirm removal!')" class="btn btn-danger" href="{{url('delete_news',$data1->id)}}">Remove</a>
                         </th>
                     </tr>
                     @endforeach
@@ -63,10 +66,13 @@
                     <tr style="background-color:blue">
                         <th style="padding: 20px">{{$data2->title}}</th>
                         <th style="padding: 20px">{{$data2->category}}</th>
-                        <th style="padding: 20px width:500px">{{$data2->body}}</th>
-                        <th style="padding: 20px">{{$data2->image}}</th>
                         <th style="padding: 20px">
-                        <a class="btn btn-danger" href="{{url('deleteEvents',$data2->id)}}">Remove</a>
+                        <a class="btn btn-success" href="{{route('detailed_data.show', ['body' => $data2->body])}}">View</a>
+                        </th>
+                        <!--th style="padding: 20px width:500px">{{$data2->body}}</th-->
+                        <th style="padding: 20px"><img height="100" width="100" src="eventimage/{{$data2->image}}" alt=""></th>
+                        <th style="padding: 20px">
+                        <a onclick="return confirm('Confirm removal!')" class="btn btn-danger" href="{{url('delete_event',$data2->id)}}">Remove</a>
                         </th>
                     </tr>
                     @endforeach
@@ -86,9 +92,9 @@
                         <th style="padding: 20px">{{$data3->name}}</th>
                         <th style="padding: 20px">{{$data3->phone}}</th>
                         <th style="padding: 20px">{{$data3->email}}</th>
-                        <th style="padding: 20px">{{$data3->image}}</th>
+                        <th style="padding: 20px"><img height="100" width="100" src="doctorimage/{{$data3->image}}" alt=""></th>
                         <th style="padding: 20px">
-                        <a class="btn btn-danger" href="{{url('deleteDoc',$data3->id)}}">Remove</a>
+                        <a onclick="return confirm('Confirm removal!')" class="btn btn-danger" href="{{url('delete_doctor',$data3->id)}}">Remove</a>
                         </th>
                     </tr>
                     @endforeach
@@ -107,10 +113,13 @@
                     <tr style="background-color:blue">
                         <th style="padding: 20px">{{$data4->title}}</th>
                         <th style="padding: 20px">{{$data4->category}}</th>
-                        <th style="padding: 20px width:500px">{{$data4->body}}</th>
-                        <th style="padding: 20px">{{$data4->image}}</th>
                         <th style="padding: 20px">
-                        <a class="btn btn-danger" href="{{url('deleteAppli',$data4->id)}}">Remove</a>
+                        <a class="btn btn-success" href="{{route('detailed_data.show', ['body' => $data4->body])}}">View</a>
+                        </th>
+                        <!--th style="padding: 20px width:500px">{{$data4->body}}</th-->
+                        <th style="padding: 20px"><img height="100" width="100" src="appliimage/{{$data4->image}}" alt=""></th>
+                        <th style="padding: 20px">
+                        <a onclick="return confirm('Confirm removal!')" class="btn btn-danger" href="{{url('delete_appli',$data4->id)}}">Remove</a>
                         </th>
                     </tr>
                     @endforeach
