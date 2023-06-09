@@ -47,7 +47,10 @@
                         <th style="padding: 20px">{{$news->date}}</th>
                         <th style="padding: 20px">{{$news->category}}</th>
                         <th style="padding: 20px">{{$news->topic}}</th>
-                        <th style="padding: 20px width:500px">{{$news->message}}</th>
+                        <th style="padding: 20px">
+                        <a class="btn btn-success" href="{{route('detailed_data.show', ['body' => $news->message])}}">View</a>
+                        </th>
+                        <!--th style="padding: 20px width:500px">{{$news->message}}</th-->
                         <th style="padding: 20px">{{$news->status}}</th>
                         <th style="padding: 20px">
                         <a class="btn btn-success" href="{{url('approve_user_event',$news->id)}}">Approve</a>

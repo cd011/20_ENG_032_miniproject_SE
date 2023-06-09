@@ -47,7 +47,10 @@
                         <th style="padding: 20px">{{$news->phone}}</th>
                         <th style="padding: 20px">{{$news->doctor}}</th>
                         <th style="padding: 20px">{{$news->date}}</th>
-                        <th style="padding: 20px width:500px">{{$news->message}}</th>
+                        <th style="padding: 20px">
+                        <a class="btn btn-success" href="{{route('detailed_data.show', ['body' => $news->message])}}">View</a>
+                        </th>
+                        <!--th style="padding: 20px width:500px">{{$news->message}}</th-->
                         <th style="padding: 20px">{{$news->status}}</th>
                         <th style="padding: 20px">
                         <a class="btn btn-success" href="{{url('approve_user_appointment',$news->id)}}">Approve</a>
