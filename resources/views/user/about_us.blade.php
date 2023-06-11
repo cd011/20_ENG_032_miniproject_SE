@@ -33,9 +33,9 @@
             <h1 style="font-size: 24px;">Group 09 <br></h1>
             <br>
             <p class="text-grey mb-4">20/ENG/032 - D.M.C.J. Dissanayake</p>
-            <p class="text-grey mb-4">20/ENG/</p>
-            <p class="text-grey mb-4">20/ENG/</p>
-            <p class="text-grey mb-4">20/ENG/</p>
+            <p class="text-grey mb-4">20/ENG/051 - M.F.F. Hamna</p>
+            <p class="text-grey mb-4">20/ENG/055 - H.M.D.N. Herath </p>
+            <p class="text-grey mb-4">20/ENG/101 - M.T.V. Perera</p>
           </div>
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
             <div class="img-place custom-img-1">
